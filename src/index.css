@@ -1,0 +1,39 @@
+/* Main Font */
+@import url('https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+h1 {
+  font-family: 'Be Vietnam Pro';
+  font-size: 42px;
+  line-height: 1.2;
+  font-weight: 700;
+  color: hsl(228, 39%, 23%);
+}
+
+h2 {
+  font-family: 'Be Vietnam Pro';
+  font-size: 16px;
+  line-height: 1.2;
+  font-weight: 700;
+  color: hsl(228, 39%, 23%);
+}
+
+p {
+  font-family: 'Be Vietnam Pro';
+  font-size: 16px;
+  font-weight: 400;
+  color: hsl(227, 12%, 61%);
+}
+
+body {
+  font-size: 16px;
+}
