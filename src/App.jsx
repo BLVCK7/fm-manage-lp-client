@@ -6,14 +6,22 @@ import illustration from './images/illustration-intro.svg';
 import hamburger from './images/icon-hamburger.svg';
 import close from './images/icon-close.svg';
 
+import facebook from './images/icon-facebook.svg';
+import youtube from './images/icon-youtube.svg';
+import twitter from './images/icon-twitter.svg';
+import pinterest from './images/icon-pinterest.svg';
+import instagram from './images/icon-instagram.svg';
+import logoWhite from './images/logo-white.svg';
+
 import Buttons from './components/Buttons';
 import InfoCard from './components/InfoCard';
+import TestimonialsCard from './components/TestimonialsCard';
 
 const App = () => {
   const [openNav, setOpenNav] = React.useState(false);
 
   return (
-    <div className="w-full">
+    <div className="w-auto">
       {/* Container */}
       <div className="container mx-auto">
         {/* Navigation */}
@@ -42,7 +50,7 @@ const App = () => {
                   <a
                     href={`#${el.id}`}
                     key={el.id}
-                    className="text-vDarkBlue drop-shadow-lg hover:text-darkBlue hover:underline font-vietnam font-[500] my-2">
+                    className="text-vDarkBlue drop-shadow-lg hover:text-darkGreyishBlue font-vietnam font-[500] my-2">
                     {el.title}
                   </a>
                 ))}
@@ -57,7 +65,7 @@ const App = () => {
                 <a
                   href={`#${el.id}`}
                   key={el.id}
-                  className="text-vDarkBlue hover:text-darkBlue hover:underline">
+                  className="text-vDarkBlue hover:text-darkGreyishBlue">
                   {el.title}
                 </a>
               ))}
@@ -71,11 +79,11 @@ const App = () => {
       </div>
 
       {/* Container */}
-      <div className="container mx-auto">
+      <div className="container mx-auto w-auto">
         {/* Hero Section */}
-        <section id="hero" className="w-full flex flex-col-reverse md:flex-row my-10">
+        <section id="hero" className="w-auto flex flex-col-reverse md:flex-row my-10">
           {/* Left Item - Info */}
-          <div className="flex justify-start ml-3 w-full md:w-2/5">
+          <div className="flex justify-start w-auto md:w-2/5">
             {/* Card */}
             <div className="flex flex-col justify-center items-center md:items-start">
               <h1 className="text-center md:text-left">
@@ -91,18 +99,20 @@ const App = () => {
             </div>
           </div>
           {/* Right Items - Graphs */}
-          <div className="flex w-full md:w-3/5">
-            <img src={illustration} alt="illustration" className="w-full h-full" />
+          <div className="flex w-auto md:w-3/5">
+            <img src={illustration} alt="illustration" className="w-auto h-full mx-auto" />
           </div>
         </section>
 
         {/* Differences */}
-        <section id="differences" className="my-9">
+        <section id="differences" className="flex flex-col md:flex-row my-9">
           {/* Left Item - Info */}
-          <div className="flex justify-start ml-3 w-full md:w-2/5">
+          <div className="flex justify-start w-auto md:w-2/5 md:items-start">
             {/* Card */}
-            <div className="flex flex-col justify-center items-center md:items-start">
-              <h1 className="text-center md:text-left">What`s different about Manage?</h1>
+            <div className="flex flex-col justify-center items-center md:items-start md:pt-7">
+              <h1 className="text-center md:text-left text-3xl w-[75%]">
+                What`s different about Manage?
+              </h1>
               <p className="my-6 w-[95%] md:w-[75%] text-center md:text-left">
                 Manage provides all the functionality your team needs, without the complexity. Our
                 software is tailor-made for modern digital product teams.
@@ -110,7 +120,7 @@ const App = () => {
             </div>
           </div>
           {/* Right Items - Differences */}
-          <div className="flex flex-col w-full md:w-3/5">
+          <div className="flex flex-col w-auto md:w-3/5">
             <InfoCard
               text="See how your day-to-day tasks fir into the wider vision. Go from tracking progress at the
           milestone level all the way done to the smallest of details. Never lose sight of the
@@ -130,7 +140,117 @@ const App = () => {
             />
           </div>
         </section>
+
+        {/* Testimonials */}
+        <section
+          id="testimonials"
+          className="w-auto flex flex-col items-center my-10 px-5 md:my-40">
+          {/* H1 */}
+          <div className="mb-16">
+            <h1 className="text-center md:text-left text-3xl">What they've said</h1>
+          </div>
+          <div className="flex justify-between space-x-8">
+            <TestimonialsCard />
+          </div>
+
+          {/* Dots */}
+          <div className="flex md:hidden space-x-1 my-5">
+            <div className="bg-white border-solid border-2 border-brigthRed w-3 h-3 rounded-2xl"></div>
+            <div className="bg-brigthRed w-3 h-3 rounded-2xl"></div>
+            <div className="bg-white border-solid border-2 border-brigthRed w-3 h-3 rounded-2xl"></div>
+            <div className="bg-white border-solid border-2 border-brigthRed w-3 h-3 rounded-2xl"></div>
+          </div>
+
+          {/* Button */}
+          <div className="md:mt-8">
+            <Buttons name={'Get Started'} />
+          </div>
+        </section>
       </div>
+
+      {/* Get Started Section */}
+      <section
+        id="cta"
+        className="flex flex-col w-auto bg-brigthRed px-4 py-24 text-center md:flex-row md:justify-between md:items-center md:px-36">
+        <h1 className="text-white mb-8 md:mb-0 md:w-[50%] md:text-left">
+          Simplify how your team works today.
+        </h1>
+        <div>
+          <Buttons name={'Get Started'} white={true} />
+        </div>
+      </section>
+
+      {/* Footer */}
+      <section className="w-auto bg-darkBlue py-8 md:px-36 md:py-12">
+        <div className="flex flex-col md:flex-row-reverse justify-center items-center">
+          {/* Search */}
+          <div className="space-x-2 my-10 md:my-0 w-full flex justify-center items-center md:w-1/4">
+            <input
+              type="text"
+              placeholder="Updates in your inbox..."
+              className="w-auto rounded-3xl p-4"
+            />
+            <Buttons name={'GO'} />
+          </div>
+          {/* Links */}
+          <div className="w-full flex justify-around md:w-1/2">
+            <div className="flex flex-col space-y-3">
+              <a href={`#home`} className="text-white hover:text-brigthRed">
+                Home
+              </a>
+              {links.map(
+                (el, index) =>
+                  index < 3 && (
+                    <a href={`#${el.id}`} key={el.id} className="text-white hover:text-brigthRed">
+                      {el.title}
+                    </a>
+                  ),
+              )}
+            </div>
+            <div className="flex flex-col space-y-3">
+              {links.map(
+                (el, index) =>
+                  index >= 3 && (
+                    <a href={`#${el.id}`} key={el.id} className="text-white hover:text-brigthRed">
+                      {el.title}
+                    </a>
+                  ),
+              )}
+              <a href={`#privacy`} className="text-white hover:text-brigthRed">
+                Privacy Policy
+              </a>
+            </div>
+          </div>
+
+          {/* Icons */}
+          <div className="flex flex-col md:flex-col-reverse md:w-1/4 md:items-start">
+            <div className="flex space-x-8 md:space-x-2 my-14">
+              <img src={facebook} alt="facebook" className="w-8 h-8 md:w-6 md:h-6 cursor-pointer" />
+              <img src={youtube} alt="youtube" className="w-8 h-8 md:w-6 md:h-6 cursor-pointer" />
+              <img src={twitter} alt="twitter" className="w-8 h-8 md:w-6 md:h-6 cursor-pointer" />
+              <img
+                src={pinterest}
+                alt="pinterest"
+                className="w-8 h-8 md:w-6 md:h-6 cursor-pointer"
+              />
+              <img
+                src={instagram}
+                alt="instagram"
+                className="w-8 h-8 md:w-6 md:h-6 cursor-pointer"
+              />
+            </div>
+            {/* Logo */}
+            <div className="flex justify-center items-center">
+              <img src={logoWhite} alt="logo-manage" className="" />
+            </div>
+          </div>
+        </div>
+
+        {/* Copyright */}
+        <div className="flex justify-center mt-16">
+          <p>Copyright 2022. All Rights Reserved</p>
+        </div>
+      </section>
     </div>
   );
 };

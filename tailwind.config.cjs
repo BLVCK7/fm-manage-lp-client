@@ -4,7 +4,7 @@ module.exports = {
   theme: {
     colors: {
       brigthRed: 'hsl(12, 88%, 59%)',
-      darkBlue: 'hsl(228, 39%, 23%),',
+      darkBlue: 'hsl(228, 39%, 23%)',
       darkGreyishBlue: 'hsl(227, 12%, 61%)',
       vDarkBlue: 'hsl(233, 12%, 13%)',
       vPaleRed: 'hsl(13, 100%, 96%)',
